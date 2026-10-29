@@ -370,7 +370,7 @@ function App() {
         </section>
 
         <section className="work section-shell" id="work">
-          <SectionHeading number="02" eyebrow="22 VIDEOS · ALL FROM YOUR ASSETS FOLDER" title={<>The work<br />speaks.</>}>
+          <SectionHeading number="02" eyebrow="CREATED VIDEOS" title={<>The work<br />speaks.</>}>
             <p>Every original clip gets its own correctly framed still and playable preview. Filter the work by project category and press play to hear each excerpt.</p>
           </SectionHeading>
           <div className="work-toolbar" data-reveal>
