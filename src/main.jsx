@@ -16,36 +16,45 @@ const posterFiles = import.meta.glob('../assets/work-posters/*.jpg', {
 });
 
 const clips = [
-  { slug: '0507-1', filename: '0507(1).mp4', portrait: false },
-  { slug: '0627', filename: '0627.mp4', portrait: false },
-  { slug: '09-030-26-1', filename: '09-030-26(1).mp4', portrait: true },
-  { slug: '6', filename: '6.mp4', portrait: true },
-  { slug: 'alignment-2', filename: 'ALIGNMENT 2.mp4', portrait: true },
-  { slug: 'ccsa-vsl', filename: 'CCSA VSL.mp4', portrait: false },
+  { slug: '0507-1', filename: '0507(1).mp4', portrait: false, featured: true, title: 'Live teaching episode 1: Compounding effect', role: 'Videographer and editor', format: '16:9', tools: 'Premiere Pro' },
+  { slug: '0627', filename: '0627.mp4', portrait: false, featured: true, title: 'Church advertisement', role: 'Editor', format: '16:9', tools: 'Premiere Pro + Grok Imagine AI' },
+  { slug: '09-030-26-1', filename: '09-030-26(1).mp4', portrait: true, featured: false, title: 'Short Form Content', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: '6', filename: '6.mp4', portrait: true, featured: false, title: 'Short Form Content', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'alignment-2', filename: 'ALIGNMENT 2.mp4', portrait: true, featured: false, title: 'Short Form Content', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'ccsa-vsl', filename: 'CCSA VSL.mp4', portrait: false, featured: true, title: 'Video Sales Lead 1', role: 'Editor', format: '16:9', tools: 'Premiere Pro + CapCut' },
   {
     slug: 'clipdown-long',
     filename: 'ClipDown.com_AQOhrwweFjrG-f1UQbCJM3mVzZAt36KdHAM2f9DiezJnEoc3eJnu3_nCrc2HE9w9DOJOkUqrG2Ek3r1pQomHyL43A36JtNE9ZDbwZIM.mp4',
     portrait: false,
+    featured: true,
+    title: 'Ghosted launch advert',
+    role: 'Editor',
+    format: '16:9',
+    tools: 'Premiere Pro',
   },
   {
     slug: 'clipdown-reel',
     filename: 'ClipDown.com_AQO_zGopyRSqPachOz3g9V6WgZHH1igFUMQ5L1UtsrjiqeUPG9rlvr9eLnxlvaT1i9dmljw2htKbuLFnwOxugfXJ9rKiKGp7h9LtV0Q.mp4',
     portrait: true,
+    featured: true,
+    title: 'Ghosted product shoot',
+    role: 'Editor',
+    format: '9:16',
+    tools: 'Premiere Pro',
   },
-  { slug: 'compound-effects-2', filename: 'compound effects 2.mp4', portrait: true },
-  { slug: 'compounding-effect-final', filename: 'compounding effect final .mp4', portrait: false },
-  { slug: 'drift-ep-3', filename: 'Drift Ep 3.mp4', portrait: true },
-  { slug: 'final-short-1', filename: 'final short 1.mp4', portrait: true },
-  { slug: 'intro', filename: 'intro.mp4', portrait: false },
-  { slug: 'learn-by-falling', filename: 'LEARN BY FALLING.mp4', portrait: true },
-  { slug: 'nty-highlights', filename: 'NTY highlights.mp4', portrait: true },
-  { slug: 'parents-2', filename: 'Parents!!(2).mp4', portrait: true },
-  { slug: 'test-1', filename: 'Test_1.mp4', portrait: true },
-  { slug: 'the-survival-trap-3', filename: 'The survival trap 3.mp4', portrait: true },
-  { slug: 'there-will-always-be-problems', filename: 'There will always be problems.mp4', portrait: true },
-  { slug: 'youtube-1-2', filename: 'YouTube 1 - 2.mp4', portrait: false },
-  { slug: 'youtube-1-4', filename: 'YouTube 1 - 4.mp4', portrait: false },
-  { slug: 'youtube-1-5', filename: 'YouTube 1 - 5.mp4', portrait: false },
+  { slug: 'compound-effects-2', filename: 'compound effects 2.mp4', portrait: true, featured: false, title: 'Short Form Content', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'drift-ep-3', filename: 'Drift Ep 3.mp4', portrait: true, featured: false, title: 'Short Form Content', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'final-short-1', filename: 'final short 1.mp4', portrait: true, featured: false, title: 'Short Form Content', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'intro', filename: 'intro.mp4', portrait: false, featured: true, title: 'Live teaching episode 2: Alignment framework', role: 'Videographer and editor', format: '16:9', tools: 'Premiere Pro' },
+  { slug: 'learn-by-falling', filename: 'LEARN BY FALLING.mp4', portrait: true, featured: true, title: 'LEARN BY FALLING', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'nty-highlights', filename: 'NTY highlights.mp4', portrait: true, featured: true, title: 'NTY highlights', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'parents-2', filename: 'Parents!!(2).mp4', portrait: true, featured: false, title: 'Short Form Content', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'test-1', filename: 'Test_1.mp4', portrait: true, featured: false, title: 'Short Form Content', role: 'Videographer and editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'the-survival-trap-3', filename: 'The survival trap 3.mp4', portrait: true, featured: false, title: 'Short Form Content', role: 'Editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'there-will-always-be-problems', filename: 'There will always be problems.mp4', portrait: true, featured: false, title: 'There will always be problems', role: 'Editor', format: '9:16', tools: 'Premiere Pro + CapCut' },
+  { slug: 'youtube-1-2', filename: 'YouTube 1 - 2.mp4', portrait: false, featured: false, title: 'Video Sales Lead 2', role: 'Editor', format: '16:9', tools: 'Premiere Pro + CapCut' },
+  { slug: 'youtube-1-4', filename: 'YouTube 1 - 4.mp4', portrait: false, featured: false, title: 'Video Sales Lead 3', role: 'Editor', format: '16:9', tools: 'Premiere Pro + CapCut' },
+  { slug: 'youtube-1-5', filename: 'YouTube 1 - 5.mp4', portrait: false, featured: false, title: 'Video Sales Lead 4', role: 'Editor', format: '16:9', tools: 'Premiere Pro + CapCut' },
 ];
 
 function mediaUrl(files, kind, slug) {
@@ -54,10 +63,9 @@ function mediaUrl(files, kind, slug) {
   return file;
 }
 
-function getClient(filename, portrait) {
+function getClient(filename) {
   if (filename.startsWith('ClipDown')) return { id: 'footfoot', label: 'FOOTFOOT · LUXURY' };
   if (filename.startsWith('YouTube') || filename === 'CCSA VSL.mp4') return { id: 'hausinorder', label: 'HAUSINORDER' };
-  if (portrait) return { id: 'shorts', label: 'SHORT-FORM · PROJECT' };
   return { id: 'uptouch', label: 'UPTOUCH STUDIOS' };
 }
 
@@ -70,11 +78,18 @@ const categoryLabels = {
 };
 
 const projects = clips.map((clip) => {
-  const client = getClient(clip.filename, clip.portrait);
+  const client = getClient(clip.filename);
+  const isUptouchShort = clip.portrait && client.id === 'uptouch';
   return {
     ...clip,
     category: clip.portrait ? 'shorts' : client.id,
     client,
+    // TODO: Replace placeholders for projects without supplied details.
+    title: clip.title ?? 'TODO: Add project title',
+    role: clip.tools
+      ? `${clip.role} · ${clip.tools}`
+      : clip.role ?? (isUptouchShort ? 'Editor and videographer · Premiere Pro + CapCut' : 'TODO: Add role'),
+    format: clip.format ?? (isUptouchShort ? '9:16' : 'TODO: Add format'),
     preview: mediaUrl(previewFiles, 'previews', clip.slug),
     poster: mediaUrl(posterFiles, 'posters', clip.slug),
   };
@@ -84,28 +99,29 @@ const projects = clips.map((clip) => {
 }).map((project, index) => ({ ...project, index: index + 1 }));
 
 const filters = [
-  { id: 'all', label: 'All 22 videos' },
+  { id: 'all', label: `All ${projects.length} videos` },
   { id: 'shorts', label: 'Short-form' },
   { id: 'footfoot', label: 'Footfoot luxury' },
   { id: 'hausinorder', label: 'HAUSINORDER' },
   { id: 'uptouch', label: 'Uptouch Studios' },
 ];
 
+// TODO: Replace generic release labels with each work's verified public title.
 const publishedCollections = [
   {
     title: 'Full YouTube videos',
     client: 'HAUSINORDER',
     links: [
-      { label: 'Video 01', url: 'https://www.youtube.com/watch?v=rPyK2GM0wpc' },
-      { label: 'Video 02', url: 'https://www.youtube.com/watch?v=as3rgIL68Vk' },
+      { label: 'Video sales lead', url: 'https://www.youtube.com/watch?v=rPyK2GM0wpc' },
+      { label: 'Video sales follow-up', url: 'https://www.youtube.com/watch?v=as3rgIL68Vk' },
     ],
   },
   {
     title: 'Footwear reels',
     client: 'FOOTFOOT',
     links: [
-      { label: 'Reel 01', url: 'https://www.instagram.com/footfoot_household/reel/DZF0zV4IGXl/' },
-      { label: 'Reel 02', url: 'https://www.instagram.com/footfoot_household/reel/DRSZE2RiNny/' },
+      { label: 'Ghosted product shoot', url: 'https://www.instagram.com/footfoot_household/reel/DZF0zV4IGXl/' },
+      { label: 'Ghosted launch Ad', url: 'https://www.instagram.com/footfoot_household/reel/DRSZE2RiNny/' },
     ],
   },
   {
@@ -141,10 +157,10 @@ const publishedCollections = [
     title: 'Creator reels',
     client: 'DESTINY AJAX',
     links: [
-      { label: 'Reel 01', url: 'https://www.instagram.com/reel/Da22AStNOI6/' },
-      { label: 'Reel 02', url: 'https://www.instagram.com/destinyajax/reel/DadFr7DIvJx/' },
-      { label: 'Reel 03', url: 'https://www.instagram.com/destinyajax/reel/DZe7A5JoqHY/' },
-      { label: 'Reel 04', url: 'https://www.instagram.com/destinyajax/reel/DXZJJMbCFXj/' },
+      { label: 'Clarity Sprint', url: 'https://www.instagram.com/reel/Da22AStNOI6/' },
+      { label: 'Hit Bottom', url: 'https://www.instagram.com/destinyajax/reel/DadFr7DIvJx/' },
+      { label: 'Awareness', url: 'https://www.instagram.com/destinyajax/reel/DZe7A5JoqHY/' },
+      { label: 'Compounding effects', url: 'https://www.instagram.com/destinyajax/reel/DXZJJMbCFXj/' },
     ],
   },
 ];
@@ -171,6 +187,7 @@ function ProjectCard({ project, onPlay }) {
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
+        if (!video.src) video.src = project.preview;
         video.play().then(() => setAutoplayBlocked(false)).catch(() => setAutoplayBlocked(true));
       } else {
         video.pause();
@@ -182,7 +199,7 @@ function ProjectCard({ project, onPlay }) {
       observer.disconnect();
       video.pause();
     };
-  }, []);
+  }, [project.preview]);
 
   return (
     <article
@@ -191,13 +208,20 @@ function ProjectCard({ project, onPlay }) {
       style={{ '--reveal-delay': `${(project.index % 4) * 75}ms` }}
     >
       <div className="project-preview" style={{ '--preview-poster': `url("${project.poster}")` }}>
-        <video ref={videoRef} className="project-video" src={project.preview} poster={project.poster} muted loop playsInline preload="none" aria-label={`Project ${String(project.index).padStart(2, '0')} silent preview`} />
+        <video ref={videoRef} className="project-video" poster={project.poster} muted loop playsInline preload="none" aria-label={`Project ${String(project.index).padStart(2, '0')} silent preview`} />
         <div className="project-preview-shade" aria-hidden="true" />
         <div className="project-preview-top"><span>{project.client.label}</span><span>{String(project.index).padStart(2, '0')}</span></div>
         <div className="project-preview-bottom">
           <button type="button" onClick={() => onPlay(project)} aria-label={`Play project ${String(project.index).padStart(2, '0')} with sound`}>↗</button>
         </div>
         {autoplayBlocked && <button className="preview-fallback" type="button" onClick={() => onPlay(project)}>PLAY VIDEO ↗</button>}
+      </div>
+      <div className="project-copy">
+        <p className="project-client">{project.client.label} · {project.format}</p>
+        <div className="project-title-row">
+          <h3>{project.title}</h3>
+          <span className="project-role">{project.role}</span>
+        </div>
       </div>
     </article>
   );
@@ -238,11 +262,13 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [copyStatus, setCopyStatus] = useState('');
-  const visibleProjects = projects.filter((project) => {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const filteredProjects = projects.filter((project) => {
     if (activeFilter === 'all') return true;
     if (activeFilter === 'shorts') return project.portrait;
     return project.client.id === activeFilter;
   });
+  const visibleProjects = filteredProjects.filter((project) => showAllProjects || project.featured);
   const projectGroups = activeFilter === 'all'
     ? categoryOrder.map((id) => ({
       id,
@@ -303,7 +329,7 @@ function App() {
     });
 
     return () => observer.disconnect();
-  }, [activeFilter]);
+  }, [activeFilter, showAllProjects]);
 
   async function copyEmail() {
     try {
@@ -354,11 +380,11 @@ function App() {
 
         <div className="client-strip" aria-label="Selected collaborators">
           <span className="micro-label">IN THE FRAME WITH</span>
-          <span>HAUSINORDER</span><span>FOOTFOOT</span><span>UPTOUCH STUDIOS</span><span>SHORT-FORM EDITS</span>
+          <span>HAUSINORDER</span><span>FOOTFOOT</span><span>UPTOUCH STUDIOS</span>
         </div>
 
         <section className="about section-shell" id="about">
-          <SectionHeading number="01" eyebrow="A LITTLE ABOUT ME" title={<>From the first frame<br />to the final feeling.</>}>
+          <SectionHeading number="01" eyebrow="A LITTLE ABOUT ME" title={<>Camera to cut.</>}>
             <p>I’m David Fen — a videographer and editor in Abuja. I work across the whole story: shaping the idea, capturing the moments, and finding the cut that makes it land.</p>
             <a className="text-link" href="#contact">LET’S MAKE SOMETHING <span aria-hidden="true">↗</span></a>
           </SectionHeading>
@@ -371,7 +397,7 @@ function App() {
 
         <section className="work section-shell" id="work">
           <SectionHeading number="02" eyebrow="CREATED VIDEOS" title={<>The work<br />speaks.</>}>
-            <p>Every original clip gets its own correctly framed still and playable preview. Filter the work by project category and press play to hear each excerpt.</p>
+            <p>A selection of recent work. Filter by client or format and tap any clip to play.</p>
           </SectionHeading>
           <div className="work-toolbar" data-reveal>
             <div className="filter-list" role="group" aria-label="Filter projects">
@@ -379,7 +405,14 @@ function App() {
                 <button key={filter.id} type="button" aria-pressed={activeFilter === filter.id} onClick={() => setActiveFilter(filter.id)}>{filter.label}</button>
               ))}
             </div>
-            <span className="work-count">{String(visibleProjects.length).padStart(2, '0')} / {String(projects.length).padStart(2, '0')} VIDEOS</span>
+            <div className="work-toolbar-actions">
+              {filteredProjects.some((project) => !project.featured) && (
+                <button className="show-all-button" type="button" aria-expanded={showAllProjects} onClick={() => setShowAllProjects(!showAllProjects)}>
+                  {showAllProjects ? 'Show featured' : 'Show all'}
+                </button>
+              )}
+              <span className="work-count">{String(visibleProjects.length).padStart(2, '0')} / {String(filteredProjects.length).padStart(2, '0')} VIDEOS</span>
+            </div>
           </div>
           <div className="project-groups" aria-live="polite">
             {projectGroups.map((group) => (
@@ -398,7 +431,7 @@ function App() {
 
         <section className="published-work section-shell" id="published">
           <SectionHeading number="03" eyebrow="PUBLISHED RELEASES" title={<>More than<br />a thumbnail.</>}>
-            <p>Playable footage leads the portfolio. These links to the previously featured online releases are still here when you want to open the full published version.</p>
+            <p>Full-length versions on YouTube.</p>
           </SectionHeading>
           <div className="published-grid">
             {publishedCollections.map((collection, index) => (
@@ -430,6 +463,11 @@ function App() {
               <span className="service-tags">LONG-FORM · SHORT-FORM · COMMERCIAL</span>
             </article>
           </div>
+          <div className="tools-availability" data-reveal>
+            <div><span className="micro-label">TOOLS</span><p>Premiere Pro · DaVinci Resolve · After Effects · CapCut · Filmora</p></div>
+            <div><span className="micro-label">AVAILABILITY</span><p>Open to remote work, flexible with US/UK/EU hours</p></div>
+            <a className="text-link" href="/cv.pdf" download>DOWNLOAD CV <span aria-hidden="true">↗</span></a>
+          </div>
         </section>
 
         <section className="workflow section-shell">
@@ -437,8 +475,8 @@ function App() {
             <p>Clear steps, collaborative decisions, and a finished video ready for its audience.</p>
           </SectionHeading>
           <ol className="workflow-list">
-            <li><span>01</span><h3>Brief</h3><p>We get on the same page about the story, audience, and deliverables.</p></li>
-            <li><span>02</span><h3>Capture</h3><p>We film with a plan — attentive to the details that make a scene feel real.</p></li>
+            <li><span>01</span><h3>Brief</h3><p>I get on the same page about the story, audience and deliverables.</p></li>
+            <li><span>02</span><h3>Capture</h3><p>I film with a plan, attentive to the details that make a scene feel real.</p></li>
             <li><span>03</span><h3>Shape</h3><p>The edit finds its rhythm through structure, sound, pacing, and feedback.</p></li>
             <li><span>04</span><h3>Deliver</h3><p>Final exports are prepared for the platforms and formats you need.</p></li>
           </ol>
@@ -449,7 +487,7 @@ function App() {
             <p>Tell me what you’re making, where you’re starting, and what you want the audience to feel.</p>
             <a
               className="contact-cta"
-              href="mailto:feyikemi136@gmail.com?cc=godsdrex2001%40gmail.com&subject=Project%20inquiry"
+              href="mailto:feyikemi136@gmail.com?subject=Project%20inquiry"
             >
               START A CONVERSATION <span aria-hidden="true">↗</span>
             </a>
@@ -459,13 +497,10 @@ function App() {
               <span className="micro-label">EMAIL</span>
               <a href="mailto:feyikemi136@gmail.com">feyikemi136@gmail.com</a>
               <button type="button" onClick={copyEmail}>COPY</button>
-              <a href="mailto:godsdrex2001@gmail.com">godsdrex2001@gmail.com</a>
-              <button type="button" onClick={copyEmail}>COPY</button>
             </div>
             <div>
               <span className="micro-label">PHONE</span>
-              <a href="tel:+2347025584008">+234 702 558 4008</a>
-              <a href="tel:+2348129598609">+234 812 9598609</a>
+              <a href="https://wa.me/2347025584008">+234 702 558 4008</a>
             </div>
             <div><span className="micro-label">FOLLOW</span><a href="https://www.instagram.com/th_at_fen/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a href="https://www.linkedin.com/in/david-fenwa-ba6857202/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a></div>
             <p className="copy-status" role="status" aria-live="polite">{copyStatus}</p>
